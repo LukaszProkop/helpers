@@ -8,6 +8,7 @@ import java.util.Comparator;
  * {@link Arrays#compare(Comparable[], Comparable[])}.
  */
 final class ArraysCompare {
+
     public static void main(String[] args) {
         int[] first = {1, 0, 0, 0};
         int[] second = {0, 1, 1, 9, 5, 4};
