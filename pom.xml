@@ -14,7 +14,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <project.java.version>11</project.java.version>
+        <project.java.version>15</project.java.version>
+        <maven.compiler.source>${project.java.version}</maven.compiler.source>
+        <maven.compiler.target>${project.java.version}</maven.compiler.target>
         <maven.compiler.release>${project.java.version}</maven.compiler.release>
         <version.maven>3.6.0</version.maven>
         <!-- plugin versions should go here, so below they can be omitted -->
