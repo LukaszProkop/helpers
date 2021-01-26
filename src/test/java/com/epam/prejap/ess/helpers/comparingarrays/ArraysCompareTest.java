@@ -1,4 +1,4 @@
-package com.epam.prejap.ess.helpers.comparingArrays;
+package com.epam.prejap.ess.helpers.comparingarrays;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

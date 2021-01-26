@@ -1,4 +1,4 @@
-package com.epam.prejap.ess.helpers.comparingArrays;
+package com.epam.prejap.ess.helpers.comparingarrays;
 
 import java.util.Arrays;
 import java.util.Comparator;
