@@ -20,13 +20,37 @@ public class ArraysCompareTest {
     }
 
     //given
-    @Test(dataProvider = "objects")
+    @Test(dataProvider = "TrainObjects")
     public void testObjectArraysComparison(Train[] first, Train[] second, int expected) {
         //when
         int actual = Arrays.compare(first, second);
 
         //then
         assertEquals(actual, expected);
+    }
+
+    @Test(expectedExceptions = IllegalArgumentException.class)
+    public void shouldThrowIllegalArgumentException() {
+        int[] first = {1, 2, 3};
+        int[] second = {0, 1, 1, 9, 5, 4};
+
+        Arrays.compare(first, 3, 2, second, 1, 2);
+    }
+
+    @Test(expectedExceptions = ArrayIndexOutOfBoundsException.class)
+    public void shouldThrowArrayIndexOutOfBoundsException() {
+        int[] first = {1, 2, 3};
+        int[] second = {0, 1, 1, 9, 5, 4};
+
+        Arrays.compare(first, 1, 5, second, 1, 2);
+    }
+
+    @Test(expectedExceptions = NullPointerException.class)
+    public void shouldThrowArrayNullPointerException() {
+        int[] first = null;
+        int[] second = {0, 1, 1, 9, 5, 4};
+
+        Arrays.compare(first, 1, 5, second, 1, 2);
     }
 
     @DataProvider
@@ -39,7 +63,7 @@ public class ArraysCompareTest {
     }
 
     @DataProvider
-    public Object[][] objects() {
+    public Object[][] TrainObjects() {
         Train[] arrOne = {new Train(1), new Train(50), new Train(7)};
         Train[] arrTwo = {new Train(8), new Train(9), new Train(12)};
         Train[] arrThree = {new Train(85), new Train(63), new Train(7)};
